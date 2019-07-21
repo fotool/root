@@ -5,14 +5,38 @@
     <title>입력폼</title>
 </head>
 <body leftmargin="0" rightmargin="0" topmargin="0">
-<img src = "img/menu.jpg" alt = "메뉴판" usemap = "#favorites">
+<img src = "img/menu.jpg" alt = "메뉴판" usemap = "#favorites" style="max-width: 100%; height: auto;">
 <map name = "#favorites">
 <area shape ="rect" coords = "153, 50, 398, 140" href="index.html" alt="홈">
-<area shape ="rect" coords = "513, 50, 689, 140" href="../java/webbasic/WebContent/profile.html" alt="프로필">
+<area shape ="rect" coords = "513, 50, 689, 140" href="profile.html" alt="프로필">
 <area shape ="rect" coords = "828, 50, 1038, 140" href="text.html" alt="Example">
-<area shape ="rect" coords = "1171, 50, 1345, 140" alt="Form">
+<area shape ="rect" coords = "1171, 50, 1345, 140" href="form.html" alt="Form">
 </map>
 
+<h2><p style="text-align:center;">폼 만들기</p></h2>
+<h3><p style="text-align:center;">&lt;form&gt;태그 - 폼 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;form [속성="속성 값"]&gt; 여러 폼 요소&lt;/form&gt;</p><br>
+
+<h3><p style="text-align:center;">&lt;label&gt;태그 - 폼 요소에 레이블 붙이기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;label [속성="속성 값"]&gt; 레이블 &lt;input ...&gt;&lt;/label&gt;</p><br>
+
+<h3><p style="text-align:center;">&lt;fieldset&gt;, &lt;legend&gt;태그 - 폼 요소 그룹으로 묶기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;fieldset [속성="속성 값"] &gt; ... &lt;/fieldset&gt;</p><br><br>
+
+<h2><p style="text-align:center;">사용자 입력을 위한 &lt;input&gt; 태그</p></h2>
+<h3><p style="text-align:center;">&lt;input&gt;태그 - 입력 항목 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="유형" [속성="속성 값"] &gt;</p>
+
+<h3><p style="text-align:center;">type="hidden" - 히든 필드 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="hidden" name="이름" value="서버로 넘길 값"&gt;</p>
+
+<h3><p style="text-align:center;">type="text" - 텍스트 필드 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="text" [속성="속성 값"]&gt;</p>
+
+<h3><p style="text-align:center;">type="password" - 비밀번호 입력란 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="password" [속성="속성 값"]&gt;</p><br>
+
+<h4><p style="text-align:center;">[예시]</p></h4>
 <form>
 <fieldset>
 <legend>로그인 정보</legend>
@@ -29,9 +53,15 @@
 <input type="submit" value="로그인">
 <input type="submit" value="취소">
 </fieldset>
-<br><br><br><br><br>
+<br><br><br>
 
-<h1>회원가입</h1>
+<h3><p style="text-align:center;">type="search", type="url", type="email", type="tel" - 분화된 텍스트 필드</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="search" [속성="속성 값"]&gt;</p><br>
+<p style="text-align:center;">- 기본형: &lt;input type="url" [속성="속성 값"]&gt;</p><br>
+<p style="text-align:center;">- 기본형: &lt;input type="email" [속성="속성 값"]&gt;</p><br>
+<p style="text-align:center;">- 기본형: &lt;input type="tel" [속성="속성 값"]&gt;</p><br>
+
+<h4><p style="text-align:center;">[예시] 회원가입</p></h4>
 <fieldset>
 <legend>로그인 정보</legend>
 <table>
@@ -53,7 +83,7 @@
 <ul>
 <li>
     <label for = "user-name">이름</label>
-    <input type = "text" id="user-name" autofocus required>
+    <input type = "text" id="user-name">
 </li>
 <li>
     <label for= "mail">메일 주소</label>
@@ -69,12 +99,28 @@
 </li>
 </ul>
 </fieldset>
-<input type="submit" value="가입하기"><br>
-<label>주문갯수 1:
-<input type="number" min = 1 max =50000 value=1><br>
-<label>주문갯수 2: <input type="range" min=1 max = 1000 value=1>
-</label>
-<br><br>
+<input type="submit" value="가입하기"><br><br><br>
+
+<h3><p style="text-align:center;">type="number" - 숫자 입력하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="number" [속성="속성 값"]&gt;</p>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><label>
+주문갯수:
+<input type="number" min = 1 max =50000 value=1>
+</label></p><br><br><br>
+
+<h3><p style="text-align:center;">type="range" - 슬라이드 막대로 숫자 지정하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="range" [속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><label>
+주문갯수: <input type="range" min=1 max = 1000 value=1>
+</label></p>
+<br><br><br>
+
+<h3><p style="text-align:center;">type="radio", type="checkbox" - 라디오 버튼과 체크박스 넣기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="radio" [속성="속성 값"]&gt;</p>
+<p style="text-align:center;">- 기본형: &lt;input type="checkbox" [속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
 <fieldset>
 <legend>신청과목</legend>
 <label>신청할 과목 선택(1과목) </label><br>
@@ -89,12 +135,52 @@
     <input type="checkbox" name="subject" value="grammar">5분회화
     <input type="checkbox" name="subject" value="writing">모닝팝스
 </fieldset>
-<input type="color"><br>
-조회기간: <input type="date" id="start"> ~ <input type="date" id="end">
-조회시간: <input type="time" id="start1"> ~ <input type="time" id="end1">
-<input type= "image" src="img/btn1.jpg" alt="로그인">
+<br><br><br>
 
-<select id ="class">
+<h3><p style="text-align:center;">type="color" - 색상 선택 상자 표시하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="color" [value="기본 색" [속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><input type="color"></p><br><br><br>
+
+<h3><p style="text-align:center;">type="date", type="month", type="week" - 날짜 표시하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="date | month | week" [value="기본 색" 속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;">조회기간: <input type="date" id="start"> ~ <input type="date" id="end"></p><br><br><br>
+
+<h3><p style="text-align:center;">type="time", type="datetime", type="datetime-local" - 시간 지정하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="time | datetime | datetime-local" [value="기본 색" 속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;">조회시간: <input type="time" id="start1"> ~ <input type="time" id="end1"></p><br><br><br>
+
+<h3><p style="text-align:center;">type="image" - 이미지 버튼 넣기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;input type="image" src="경로" alt="대체 텍스트" [속성="속성 값"]&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><input type= "image" src="img/login.jpg" alt="로그인"></p><br><br>
+
+<h2><p style="text-align:center;">&lt;input&gt; 태그의 다양한 속성</p></h2>
+
+<h3><p style="text-align:center;">autofocus 속성</p></h3>
+<p style="text-align:center;">- 입력 커서 표시하기</p>
+
+<h3><p style="text-align:center;">placeholder 속성</p></h3>
+<p style="text-align:center;">- 힌트 표시하기</p>
+
+<h3><p style="text-align:center;">readonly 속성</p></h3>
+<p style="text-align:center;">- 읽기 전용 필드 만들기</p>
+
+<h3><p style="text-align:center;">required 속성</p></h3>
+<p style="text-align:center;">- 필수 필드 지정하기</p><br><br>
+
+<h2><p style="text-align:center;">여러 테이터 나열해 보여주기</p></h2>
+<h3><p style="text-align:center;">&lt;select&gt;, &lt;optgroup&gt;, &lt;option&gt; 태그 - 드롭다운 목록 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;select 속성="속성 값"&gt;</p>
+<p style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="값" [속성="속성 값"]&gt; 내용1 &lt;/option&gt;</p>
+<p style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="값" [속성="속성 값"]&gt; 내용2 &lt;/option&gt;</p>
+<p style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value="값" [속성="속성 값"]&gt; 내용3 &lt;/option&gt;</p>
+<p style="text-align:center;">...</p>
+<p style="text-align:center;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&lt;/select&gt;</p><br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><select id ="class">
 <optgroup label = "공과대학">
     <option value = "arch" selected>건축공학과</option>
     <option value = "comp">컴퓨터공학과</option>
@@ -105,10 +191,26 @@
     <option value = "comp">컴퓨터공학과</option>
     <option value = "meca">기계공학과</option>
 </optgroup>
-</select>
-<textarea cols=100 rows=10 id = "content"></textarea>
-<progress value= 30 max = 100></progress>
-<meter value = 0.8></meter>
+</select></p>
+<br><br><br>
+<h3><p style="text-align:center;">&lt;textarea&gt; 태그 - 여러 줄 입력하는 텍스트 영역 만들기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;textarea [속성="속성 값"]&gt; 내용&lt;/textarea&gt;</p> <br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><textarea cols=100 rows=10 id = "content"></textarea></p><br><br><br>
+
+<h2><p style="text-align:center;">기타 다양한 폼 요소들</p></h2>
+<h3><p style="text-align:center;">&lt;button&gt; 태그 -  버튼 넣기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;button [type="submit | reset | button"] &gt; 내용 &lt;/button&gt;</p><br><br>
+
+<h3><p style="text-align:center;">&lt;progress&gt; 태그 - 진행 상태 보여주기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;progress value="값" [max="값"]&gt;&lt;/progress&gt;</p> <br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><progress value= 30 max = 100></progress></p><br><br><br>
+
+<h3><p style="text-align:center;">&ltmeter&gt; 태그 - 값이 차지하는 크기 표시하기</p></h3>
+<p style="text-align:center;">- 기본형: &lt;meter value="값" [속성="속성 값"]&gt;&lt;/meter&gt;</p> <br>
+<h4><p style="text-align:center;">[예시]</p></h4>
+<p style="text-align:center;"><meter value = 0.8></meter></p><br><br><br>
 
 </form>
 </body>
