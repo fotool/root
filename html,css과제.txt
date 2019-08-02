@@ -1,0 +1,4 @@
+1. 첫번째 페이지 index.html (Clear)
+2. 메뉴 변경(css box 모델)
+3. 글자, 폰트 (profile) - 스타일 시트 사용
+4. 일자별 리스트(왼쪽에 위치) [example] - inline
